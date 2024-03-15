@@ -30,9 +30,9 @@
           </a></li>
           {% block nav %}
           <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'catalog' %}">Каталог</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Корзина</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Тех-Поддержка</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'supp' %}">Поддержка</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О нас</a></li>
             <svg class="bi" width="24" height="24"><use xlink:href="#cart"></use></svg>
           {% endblock %}
@@ -43,8 +43,10 @@
   </div>
 </nav>
     {% block tit %}
+
     <h1> Главная страница Нашего магазина</h1>
     <p>Мы лучшие в своем деле спасибо что выбираете нас</p>
+
     {% endblock%}
 </body>
 </html>

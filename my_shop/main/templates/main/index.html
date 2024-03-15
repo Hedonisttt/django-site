@@ -1,18 +1,20 @@
 {% extends 'main/base.html' %}
 
 {% block tit %}
+<div>
     <h1> Главная страница Нашего магазина</h1>
     <p>Имеется широкий выбор товаров с доставкой на дом</p>
+</div>
 {% endblock%}
 
 {%block title %}
-Главная
+{{ title }}
 {% endblock %}
 
 
 {% block nav %}
             <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'catalog' %}">Каталог</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Корзина</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Тех-Поддержка</a></li>
           <li class="nav-item"><a class="nav-link" href="about">О нас</a></li>

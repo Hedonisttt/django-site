@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{%block title %}
+Каталог
+{% endblock %}
+
+{% block tit %}
+    <h1> Каталог Наших Товаров</h1>
+    <p>Доставка осуществляется с помощью почты России и СДЕК</p>
+    {% if tasks%}
+        {% for el in tasks %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title }}</h3>
+            <h4>{{ el.price }}</h4>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Магазин Закрыт На Тех-Работы</p>
+    {% endif %}
+{% endblock%}
+
+

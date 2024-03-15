@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Task
+
 
 
 def index(request):
@@ -8,3 +9,11 @@ def index(request):
 
 def about(request):
     return render(request, "main/about.html")
+
+
+def catalog(request):
+    tasks = Task.objects.all()
+    return render(request, 'main/catalog.html', {'tit': 'Каталог Товаров', 'tasks': tasks})
+
+def supp(request):
+    return render(request, "main/support.html")
