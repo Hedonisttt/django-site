@@ -7,11 +7,11 @@
 {% block tit %}
     <h1> Каталог Наших Товаров</h1>
     <p>Доставка осуществляется с помощью почты России и СДЕК</p>
-    {% if tasks%}
-        {% for el in tasks %}
+    {% if task%}
+        {% for el in task %}
         <div class="alert alert-warning mt-2">
             <h3>{{ el.title }}</h3>
-            <h4>{{ el.price }}</h4>
+            <h4>{{ el.task }}</h4>
         </div>
         {% endfor %}
     {% else %}
